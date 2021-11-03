@@ -1,0 +1,261 @@
+*{
+    margin: 0px;
+    padding: 0px;  
+    box-sizing: border-box;    
+}
+//声明字体
+@font-face {
+    font-family: electronicFont;
+    src: url(../font/DS-DIGIT.TTF);
+}
+body{
+    background: url(../imgs/bg.jpg) no-repeat top center;
+    line-height: 1.15;
+}
+header{
+    height: 1.25rem;
+    background: url(../imgs/header.png) no-repeat;
+    background-size: 100% 100%;
+    position: relative;
+    h1{
+        color: white;
+        font-size: .475rem;
+        line-height: 1rem;
+        text-align: center;
+    }
+    .showtime{
+        position:absolute;
+        top: 0;
+        right: .375rem;
+        line-height: .9375rem;
+        color: rgba(255, 255, 255, 0.7);
+        //color: yellow;
+        font-size: .25rem;
+       
+    }
+}
+.mainbox{
+    min-width: 1024px;
+    max-width: 1920px;
+    display: flex;
+    //background-color: pink;
+    .left{
+        flex:3
+    }
+    .center{
+        flex: 5;
+        margin:0 .125rem .1875rem;
+    }
+    .right{
+        flex:3
+    }
+    .panel{
+        height: 3.875rem;
+        //background-color: green;
+        border: .0125rem solid rgba(25, 186, 139, 0.17);
+        background: url(../imgs/line.png) rgba(255, 255, 255, 0.04);
+        padding: 0 .1875rem .5rem;
+        margin-bottom: .1875rem;
+        position: relative;
+        &::before{
+            position: absolute;
+            top: 0;
+            left: 0;
+            content: "";
+            width: 10px;
+            height: 10px;
+            border-top: 2px solid #02a6b5 ;
+            border-left: 2px solid #02a6b5 ;
+        }
+        &::after{
+            position: absolute;
+            top: 0;
+            right: 0;
+            content: "";
+            width: 10px;
+            height: 10px;
+            border-top: 2px solid #02a6b5 ;
+            border-right: 2px solid #02a6b5 ;
+        }
+        .inpanel{
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            /* background-color: green;
+            height: 20px; */
+            &::before{
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                content: "";
+                width: 10px;
+                height: 10px;
+                border-bottom: 2px solid #02a6b5 ;
+                border-left: 2px solid #02a6b5 ;
+            }
+            &::after{
+                position: absolute;
+                bottom: 0;
+                right: 0;
+                content: "";
+                width: 10px;
+                height: 10px;
+                border-bottom: 2px solid #02a6b5 ;
+                border-right: 2px solid #02a6b5 ;
+            }
+        }
+        h2{
+            color: white;
+            font-size: .25rem;
+            text-align: center;
+            line-height: .6rem;
+        }
+        .chart{
+            height: 3rem;
+            
+            //background-color: green;
+        }
+    }
+    
+}
+.no{
+    background-color: rgba(101, 132, 226, 0.1);
+    .notop{
+        border: 1px solid rgba(25, 186, 139, 0.13);
+        padding: .1875rem;
+        ul{
+            display: flex;
+            text-align: center;
+            position: relative;
+            li{
+                flex: 1;
+                height: 1rem;
+                font-size: .875rem;
+                color: #ffeb7b;
+                list-style: none;
+                font-family: 'electronicFont';
+                &::after{
+                    content: "";
+                    position: absolute;
+                    top: 25%;
+                    height: 50%;
+                    left: 50%;
+                    width: 1px;
+                    background:rgba(255, 255, 255, 0.1)
+                }
+            }
+            &::before{
+                content: '';
+                position: absolute;
+                left: 0;
+                top: 0;
+                width: .25rem;
+                height: 10px;
+                border-top: 2px solid #02a6b5 ;
+                border-left: 2px solid #02a6b5 ;
+            }
+            &::after{
+                content: '';
+                position: absolute;
+                right: 0;
+                bottom: 0;
+                width: .25rem;
+                height: .125rem;
+                border-bottom: 2px solid #02a6b5 ;
+                border-right: 2px solid #02a6b5 ;
+            }
+        }
+    }
+    .nobottom{
+        ul{
+            display: flex;
+            li{
+                flex: 1;
+                list-style: none;
+                text-align: center;
+                height: .5rem;
+                color: rgba(255, 255, 255, 0.7);
+                font-size: .225rem;
+                padding: .125rem 0 0 0;
+            }
+        }
+    }
+}
+.map{
+    height: 10.125rem;
+   // background-color:green;
+    margin: .125rem;
+    position: relative;
+    .global{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        width: 6.475rem;
+        height: 6.475rem;
+        background: url(../imgs/global.png);
+        background-size: 100% 100%;
+        opacity: .3;
+    }
+    .shun{
+        width: 8.0375rem;
+        height: 8.0375rem;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        opacity: .6;
+       // z-index: 1;
+        background:url(../imgs/grid.png);
+        background-size: 100% 100%;
+        animation: shun 15s linear infinite;
+    }
+    @keyframes shun {
+        from{
+            transform: translate(-50%,-50%) rotate(0deg) ;
+        }
+        to{
+            transform: translate(-50%,-50%) rotate(360deg) ;
+        }
+    }
+    .ni{
+        width: 7.075rem;
+        height: 7.075rem;
+        background: url(../imgs/ni.png);
+        background-size: 100% 100%;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        animation: nis 25s linear infinite;
+        z-index: 2;
+        opacity: .3;
+    }
+    @keyframes nis {
+        from{
+            transform: translate(-50%,-50%) rotate(0deg) ;
+        }
+        to{
+            transform: translate(-50%,-50%) rotate(-360deg) ;
+        }
+    }
+    .ditu{
+        position: absolute;
+        width: 100%;
+        //background-color: green;
+        height: 10.125rem;
+    }
+}
+
+//约束屏幕尺寸
+@media screen and (max-width: 1024px) {  //如果页面最大只能到1024px，字体就42px
+    html{
+        font-size: 42px !important;
+    }
+}
+@media screen and (min-width: 1920px) { //如果页面最小是1920px，则字体就80px
+    html{
+        font-size: 80px !important;
+    }
+}

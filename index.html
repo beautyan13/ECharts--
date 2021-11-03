@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Echarts可视化</title>
+    <link rel="stylesheet" href="./css/index.css">
+</head>
+<body>
+    <header>
+        <h1>数据可视化-Echarts</h1>
+        <div class="showtime">123</div>
+        <script>
+            function time(){
+                var dt = new Date()
+                var times = document.getElementsByClassName("showtime")[0]
+                times.innerHTML = dt.getFullYear()+'年'+(dt.getMonth()+1)+'月'+
+                                dt.getDate()+'日'+dt.getHours()+':'+dt.getMinutes()
+                                +':'+dt.getSeconds()
+                setTimeout(time,1000)
+            }
+            time()
+        </script>  
+    </header>
+    <section class="mainbox">
+        <div class="left">
+            <div class="panel bar">
+                <h2>柱形图</h2>
+                <div class="chart">   
+                </div>
+                <div class="inpanel"></div>
+            </div>
+            <div class="panel line">
+                <h2>折线图</h2>
+                <div class="chart">   
+                </div>
+                <div class="inpanel"></div>
+            </div>
+            <div class="panel pie">
+                <h2>饼状图</h2>
+                <div class="chart">   
+                </div>
+                <div class="inpanel"></div>
+            </div>
+        </div>
+        <div class="center">
+            <div class="no">
+                <div class="notop">
+                    <ul>
+                        <li>125811</li>
+                        <li>104563</li>
+                    </ul>
+                </div>
+                <div class="nobottom">
+                    <ul>
+                        <li>需求人数</li>
+                        <li>供应人数</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="map">
+                <!-- 中间地图一共有4个部分，一个地图，一个球体，一个顺时针动画，一个逆时针动画 -->
+                <div class="global"></div>
+                <div class="ni"></div>
+                <div class="shun"></div>
+                <div class="ditu"></div>
+            </div>
+        </div>
+        <div class="right">
+            <div class="panel bar1">
+                <h2>柱形图</h2>
+                <div class="chart">   
+                </div>
+                <div class="inpanel"></div>
+            </div>
+            <div class="panel line1">
+                <h2>折线图</h2>
+                <div class="chart">   
+                </div>
+                <div class="inpanel"></div>
+            </div>
+            <div class="panel pie1">
+                <h2>饼状图</h2>
+                <div class="chart">   
+                </div>
+                <div class="inpanel"></div>
+            </div>
+        </div>
+    </section>
+   
+    <script src="./js/flexible.js"></script>
+    <script src="./js/echarts.js"></script>
+    <script src="./js/china.js"></script>
+    <script src="./js/charts.js"></script>
+</body>
+</html>
